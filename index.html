@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Library Special Ops: Book Spree</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for typewriter/classified aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="classified-stamp">TOP SECRET // DIV. A</div>
+
+    <div class="container">
+        <header>
+            <span class="codename">CODENAME: "THE PAPER"</span>
+            <h1>📚 Acquisition Spree</h1>
+            <p class="subtitle">British Library Special Operations Division — Target Inventory</p>
+        </header>
+        
+        <form id="item-form">
+            <input type="text" id="item-input" placeholder="Enter rare volume or manuscript title..." autocomplete="off" required>
+            <button type="submit">ACQUIRE</button>
+        </form>
+
+        <div class="list-wrapper">
+            <ul id="shopping-list"></ul>
+        </div>
+
+        <footer>
+            <span id="counter">Volumes cataloged: 0</span>
+            <button id="clear-btn" class="clear-btn">Purge Archive</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

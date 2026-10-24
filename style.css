@@ -1,0 +1,219 @@
+:root {
+    --paper-bg: #f7f3e8;
+    --parchment: #ede6d6;
+    --ink-dark: #1b1a18;
+    --british-blue: #1c3144;
+    --accent-red: #b93737;
+    --border-line: #d1c7b7;
+}
+
+body {
+    font-family: 'Courier Prime', monospace;
+    background-color: #121518;
+    color: var(--ink-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(#222b36 1px, transparent 1px);
+    background-size: 20px 20px;
+    overflow-x: hidden;
+}
+
+/* SUPER LARGE, IMPOSING CLASSIFIED STAMP */
+.classified-stamp {
+    color: var(--accent-red);
+    border: 4px dashed var(--accent-red);
+    padding: 10px 25px;
+    font-family: 'Special Elite', cursive;
+    font-size: 28px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: rotate(-4deg);
+    margin-bottom: 25px;
+    opacity: 0.9;
+    text-shadow: 2px 2px 0px rgba(185, 55, 55, 0.2);
+    box-shadow: 0 0 15px rgba(185, 55, 55, 0.15);
+    background: rgba(185, 55, 55, 0.03);
+}
+
+.container {
+    background: var(--paper-bg);
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(185, 145, 90, 0.15);
+    width: 440px;
+    border: 1px solid #bfa888;
+    position: relative;
+}
+
+/* Notebook margin line effect */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 35px;
+    width: 2px;
+    background: rgba(185, 55, 55, 0.25);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--ink-dark);
+    padding-bottom: 10px;
+}
+
+.codename {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent-red);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    margin: 5px 0;
+    font-size: 26px;
+    color: var(--british-blue);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: #555;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    background: var(--parchment);
+    border: 1px solid var(--border-line);
+    font-family: 'Courier Prime', monospace;
+    color: var(--ink-dark);
+    border-radius: 0;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--british-blue);
+    background: #fff;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--british-blue);
+    color: white;
+    border: none;
+    font-family: 'Special Elite', cursive;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.2s;
+}
+
+button:hover { 
+    background-color: #2b4963; 
+}
+
+.list-wrapper {
+    max-height: 260px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+ul { 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--parchment);
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--british-blue);
+    border-top: 1px solid var(--border-line);
+    border-right: 1px solid var(--border-line);
+    border-bottom: 1px solid var(--border-line);
+    transition: transform 0.1s;
+}
+
+li:hover {
+    transform: translateX(2px);
+}
+
+li span {
+    cursor: pointer;
+    word-break: break-all;
+    padding-right: 10px;
+}
+
+li.completed {
+    border-left-color: #888;
+    background: #e4dfd0;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #777;
+    font-style: italic;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    padding: 2px 6px;
+    font-size: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: var(--accent-red);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed var(--border-line);
+    padding-top: 12px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #555;
+}
+
+.clear-btn {
+    background: transparent;
+    color: #666;
+    border: 1px solid #999;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-family: 'Courier Prime', monospace;
+}
+
+.clear-btn:hover {
+    background: var(--accent-red);
+    color: white;
+    border-color: var(--accent-red);
+}
