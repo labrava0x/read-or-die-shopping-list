@@ -12,39 +12,20 @@ body {
     background-color: #121518;
     color: var(--ink-dark);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     background-image: radial-gradient(#222b36 1px, transparent 1px);
     background-size: 20px 20px;
-    overflow-x: hidden;
-}
-
-/* SUPER LARGE, IMPOSING CLASSIFIED STAMP */
-.classified-stamp {
-    color: var(--accent-red);
-    border: 4px dashed var(--accent-red);
-    padding: 10px 25px;
-    font-family: 'Special Elite', cursive;
-    font-size: 28px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    transform: rotate(-4deg);
-    margin-bottom: 25px;
-    opacity: 0.9;
-    text-shadow: 2px 2px 0px rgba(185, 55, 55, 0.2);
-    box-shadow: 0 0 15px rgba(185, 55, 55, 0.15);
-    background: rgba(185, 55, 55, 0.03);
 }
 
 .container {
     background: var(--paper-bg);
-    padding: 30px;
+    padding: 35px;
     border-radius: 2px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(185, 145, 90, 0.15);
-    width: 440px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(185, 145, 90, 0.15);
+    width: 480px;
     border: 1px solid #bfa888;
     position: relative;
 }
@@ -58,6 +39,24 @@ body {
     left: 35px;
     width: 2px;
     background: rgba(185, 55, 55, 0.25);
+}
+
+/* MASSIVE, IMPOSING BUREAUCRATIC STAMP */
+.classified-stamp {
+    color: var(--accent-red);
+    border: 6px dashed var(--accent-red);
+    padding: 15px 20px;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-bottom: 25px;
+    opacity: 0.92;
+    text-shadow: 3px 3px 0px rgba(185, 55, 55, 0.25);
+    box-shadow: 0 0 20px rgba(185, 55, 55, 0.2);
+    background: rgba(185, 55, 55, 0.05);
 }
 
 header {
@@ -172,6 +171,7 @@ li.completed {
 }
 
 li.completed span {
+    text-decoration: line-switch;
     text-decoration: line-through;
     color: #777;
     font-style: italic;
